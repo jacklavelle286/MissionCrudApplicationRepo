@@ -9,17 +9,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+@EnableTransactionManagement
 @Entity
-@Table(name = "To_Do")
+@Table(name = "TO_DO")
 public class ToDoDomain {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@NotNull
+	//@NotNull
 	public Long id;
 	
 	@OneToMany(mappedBy = "myToDo", fetch = FetchType.EAGER)

@@ -7,10 +7,15 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
 import com.sun.istack.NotNull;
 
+import lombok.Data;
+@EnableTransactionManagement
+@Data
 @Entity
-@Table(name = "Missions")
+@Table(name = "MISSIONS")
 public class MissionsDomain {
 //these are the columns in the s table 
 	@Id
