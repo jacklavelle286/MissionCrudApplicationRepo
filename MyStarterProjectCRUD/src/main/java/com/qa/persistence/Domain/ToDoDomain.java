@@ -13,6 +13,7 @@ import javax.persistence.Table;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
 @EnableTransactionManagement
 @Entity
 @Table(name = "TO_DO")
@@ -20,13 +21,13 @@ public class ToDoDomain {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	//@NotNull
+	// @NotNull
 	public Long id;
-	
+
 	@OneToMany(mappedBy = "myToDo", fetch = FetchType.EAGER)
 	@OnDelete(action = OnDeleteAction.CASCADE)
 	private List<MissionsDomain> MissionsList;
-	
+
 	private String listName;
 
 	public ToDoDomain() {
@@ -72,4 +73,3 @@ public class ToDoDomain {
 	}
 
 }
-

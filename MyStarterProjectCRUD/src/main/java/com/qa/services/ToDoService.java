@@ -13,7 +13,6 @@ import com.qa.persistence.Repos.ToDoRepo;
 
 public class ToDoService {
 
-
 	private ToDoRepo repo;
 	private ModelMapper mapper;
 
@@ -25,14 +24,15 @@ public class ToDoService {
 	}
 
 	private ToDoDTO mapToDTO(ToDoDomain model) {
-	
+
 		return this.mapper.map(model, ToDoDTO.class);
 	}
+
 	// get
 	public List<ToDoDTO> readAll() {
 		List<ToDoDomain> dbList = this.repo.findAll();
-	List<ToDoDTO> resultList = dbList.stream().map(this::mapToDTO).collect(Collectors.toList());
-	return resultList;
+		List<ToDoDTO> resultList = dbList.stream().map(this::mapToDTO).collect(Collectors.toList());
+		return resultList;
 
 	}
 
@@ -42,7 +42,7 @@ public class ToDoService {
 		return mapToDTO(this.repo.findById(id).orElseThrow());
 	}
 
-	//	//post
+	// //post
 	public ToDoDTO create(ToDoDomain model) {
 		return this.mapToDTO(this.repo.save(model));
 	}
@@ -56,23 +56,18 @@ public class ToDoService {
 		return this.mapToDTO(this.repo.save(newDetails));
 
 	}
-	
-	
 
 	// delete
 	public boolean delete(Long id) {
-		  try {
-		        this.repo.deleteById(id);
-		        boolean exists = this.repo.existsById(id);
+		try {
+			this.repo.deleteById(id);
+			boolean exists = this.repo.existsById(id);
 
-		 
+			return !exists;
 
-		        return !exists;
-		        
-		        }catch(EmptyResultDataAccessException e) {
-		            e.printStackTrace();
-		            return false;
-		        }
-		    }
+		} catch (EmptyResultDataAccessException e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
-
+}

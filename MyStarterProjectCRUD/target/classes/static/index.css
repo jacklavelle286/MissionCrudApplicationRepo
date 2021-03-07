@@ -1,0 +1,51 @@
+.main {
+    display: block;
+    position: relative;
+    top: -2px;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: blue}
+
+
+
+   * {
+    
+    background-color: white;
+    text-align:center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+p, h3, h1, h2, h3, h4, h5, h6{
+    color: rgba(0, 0, 0, 0.94);
+    text-align: center;
+    font-size: large;
+    background-color: blue (255, 0, 0);
+    
+  
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+ .hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 10;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .rotate {
+    animation: rotation 10s infinite linear;
+  }
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }

@@ -10,11 +10,11 @@ public class MissionsDTO {
 
 	public MissionsDTO() {
 		super();
-		
-	}
-	
 
-	public MissionsDTO(Long id, String nameofMission, String responsibility, int orderofimportance, Boolean completedstatus) {
+	}
+
+	public MissionsDTO(Long id, String nameofMission, String responsibility, int orderofimportance,
+			Boolean completedstatus) {
 		super();
 		this.id = id;
 		this.nameofMission = nameofMission;
@@ -47,26 +47,20 @@ public class MissionsDTO {
 		this.completedstatus = completedstatus;
 	}
 
-
 	public String getresponsibility() {
 		return responsibility;
 	}
-
 
 	public void setresponsibility(String responsibility) {
 		this.responsibility = responsibility;
 	}
 
-
 	public int getorderofimportance() {
 		return orderofimportance;
 	}
 
-
 	public void setorderofimportance(int rank) {
 		this.orderofimportance = orderofimportance;
 	}
-
-
 
 }

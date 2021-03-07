@@ -8,11 +8,14 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import com.sun.istack.NotNull;
 
 import lombok.Data;
+
 @EnableTransactionManagement
+@CrossOrigin
 @Data
 @Entity
 @Table(name = "MISSIONS")
@@ -40,10 +43,11 @@ public class MissionsDomain {
 
 	public MissionsDomain() {
 		super();
-		
+
 	}
-	
-	public MissionsDomain(Long id, String nameof, String responsibility, Integer orderofimportance, Boolean completed, ToDoDomain myToDo) {
+
+	public MissionsDomain(Long id, String nameof, String responsibility, Integer orderofimportance, Boolean completed,
+			ToDoDomain myToDo) {
 		super();
 		this.id = id;
 		this.nameofMission = nameofMission;
@@ -54,9 +58,9 @@ public class MissionsDomain {
 
 	}
 
-
 //same but minus the ID as the id is my primary key, and auto_incremented too
-	public MissionsDomain( String nameof, String categoryof, Integer orderofimportance, Boolean completed, ToDoDomain myToDo) {
+	public MissionsDomain(String nameof, String categoryof, Integer orderofimportance, Boolean completed,
+			ToDoDomain myToDo) {
 		super();
 		this.nameofMission = nameofMission;
 		this.responsibility = responsibility;
@@ -116,4 +120,3 @@ public class MissionsDomain {
 	}
 
 }
-
