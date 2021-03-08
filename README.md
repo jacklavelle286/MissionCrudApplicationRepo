@@ -16,7 +16,13 @@ In summary my project is basically a to-do list in its function, using two table
      Project Tracking and Planning -  
      
 I use Jira to plan and track my project and ensure that the different stages of the project were carried out in relatively good time. I split the responsibilities and the use stories into 4 areas - the create, read, update and delete as this is the main purpose of the project. In my project you will see some photos to demonstrate my use of Jira. 
- 
+Below are some images of different stages in my jira board.
+
+![Image of jira1](https://i.imgur.com/rmIlC2q.png)
+![Image of jira2](https://imgur.com/3x6g7tt.png)
+![Image of jira3](https://imgur.com/TeGUIZJ.png)
+![Image of jira4](https://imgur.com/xp9Rk62.png)
+
 Risk Assesment - Below you will also find a risk assesment which detisls the potential risks of using my project - no matter how big of small.
 My application does connect from back end to a test h2 database, and it also connects to the front end of the application but I can not get any data persist to the database. I did make two integration tests  but i could also not manage to get them to work. 
 
